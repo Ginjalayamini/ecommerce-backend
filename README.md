@@ -1,25 +1,31 @@
-E-Commerce Backend API
+# E-Commerce Backend API
 
-A simple E-Commerce Backend built with Node.js, Express.js, MongoDB, and Mongoose. This project demonstrates basic CRUD (Create, Read, Update, Delete) operations for managing products using a RESTful API and follows the MVC architecture pattern.
+A simple E-Commerce Backend built with Node.js, Express.js, MongoDB, and Mongoose. This project demonstrates basic CRUD (Create, Read, Update, Delete) operations for managing products through RESTful APIs while following the MVC architecture pattern.
 
-🚀 Features
-Create a Product
-Get All Products
-Get Product by ID
-Update a Product
-Delete a Product
-MongoDB Database Integration
-MVC Architecture
-RESTful API Design
-Environment Variable Configuration
-🛠️ Tech Stack
-Node.js
-Express.js
-MongoDB
-Mongoose
-Nodemon
-Dotenv
-📂 Project Structure
+## Features
+
+* Create a Product
+* Get All Products
+* Get Product by ID
+* Update a Product
+* Delete a Product
+* MongoDB Database Integration
+* MVC Architecture
+* RESTful API Design
+* Environment Variable Configuration
+
+## Tech Stack
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* Nodemon
+* Dotenv
+
+## Project Structure
+
+```text
 backend/
 │
 ├── config/
@@ -38,32 +44,55 @@ backend/
 ├── server.js
 ├── package.json
 └── README.md
-📦 Installation
-1. Clone the Repository
+```
+
+## Installation
+
+### Clone the Repository
+
+```bash
 git clone <repository-url>
 cd ecommerce-backend
-2. Install Dependencies
+```
+
+### Install Dependencies
+
+```bash
 npm install
-3. Create Environment Variables
+```
 
-Create a .env file in the root directory.
+### Configure Environment Variables
 
+Create a `.env` file in the root directory and add:
+
+```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
-4. Start the Server
+```
 
-Development Mode:
+### Run the Application
 
+Development mode:
+
+```bash
 npm run dev
+```
 
-Production Mode:
+Production mode:
 
+```bash
 npm start
+```
 
-Server will run on:
+The server will run at:
 
+```text
 http://localhost:5000
-🗄️ Product Schema
+```
+
+## Product Schema
+
+```javascript
 {
   name: String,
   description: String,
@@ -71,12 +100,19 @@ http://localhost:5000
   category: String,
   stock: Number
 }
-📡 API Endpoints
-Create Product
+```
+
+## API Endpoints
+
+### Create Product
+
+```http
 POST /api/products
+```
 
 Request Body:
 
+```json
 {
   "name": "iPhone 15",
   "description": "Apple Smartphone",
@@ -84,23 +120,46 @@ Request Body:
   "category": "Electronics",
   "stock": 20
 }
-Get All Products
+```
+
+### Get All Products
+
+```http
 GET /api/products
-Get Product By ID
+```
+
+### Get Product By ID
+
+```http
 GET /api/products/:id
-Update Product
+```
+
+### Update Product
+
+```http
 PUT /api/products/:id
+```
 
 Request Body:
 
+```json
 {
   "name": "iPhone 15 Pro",
   "price": 90000
 }
-Delete Product
+```
+
+### Delete Product
+
+```http
 DELETE /api/products/:id
-📋 Sample Response
-Success Response
+```
+
+## Sample Responses
+
+### Success Response
+
+```json
 {
   "success": true,
   "data": {
@@ -108,34 +167,51 @@ Success Response
     "price": 80000
   }
 }
-Error Response
+```
+
+### Error Response
+
+```json
 {
   "success": false,
   "message": "Product not found"
 }
-🧪 Testing
+```
 
-You can test all endpoints using:
+## Testing
 
-Postman
-Thunder Client
-Insomnia
-🎯 Learning Outcomes
+The API can be tested using:
+
+* Postman
+* Thunder Client
+* Insomnia
+* <img width="1200" height="948" alt="image" src="https://github.com/user-attachments/assets/0ef977de-c035-43d5-bf42-4a997c84b418" />
+<img width="1338" height="927" alt="image" src="https://github.com/user-attachments/assets/44870941-4ddf-40a1-8357-24fdf7994bc9" />
+
+
+
+## Learning Outcomes
 
 This project helps in understanding:
 
-Express.js Routing
-MongoDB Integration
-Mongoose Models
-CRUD Operations
-REST APIs
-MVC Architecture
-Environment Variables
-🔮 Future Enhancements
-User Authentication (JWT)
-Role-Based Authorization
-Shopping Cart
-Order Management
-Payment Gateway Integration
-Product Search & Filtering
-Image Uploads
+* Express.js Routing
+* MongoDB Integration
+* Mongoose Models
+* CRUD Operations
+* REST APIs
+* MVC Architecture
+* Environment Variables
+
+## Future Improvements
+
+* User Authentication with JWT
+* Role-Based Authorization
+* Shopping Cart Functionality
+* Order Management
+* Payment Gateway Integration
+* Product Search and Filtering
+* Image Upload Support
+
+## Author
+
+Developed as a learning project to understand backend development using the MERN stack.
